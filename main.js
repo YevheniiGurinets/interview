@@ -7,7 +7,7 @@ function greet(person) {
     return 'hey arnold'
   }
 }
-greet({ name: 'amy' })
+console.log( greet({ name: 'amy' }) )
 
 
 
@@ -200,6 +200,7 @@ var d = {};
 [ 'zebra', 'horse' ].forEach(function(k) {
 	d[k] = undefined;
 });
+console.log(d)
 
 
 
@@ -212,6 +213,7 @@ var arr1 = "john".split('');
 var arr2 = arr1.reverse();
 var arr3 = "jones".split('');
 arr2.push(arr3);
+console.log(arr2);
 console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
 console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
 
@@ -298,7 +300,7 @@ a[c]=456;
 
 console.log(a[b]);
 
-
+console.log({}.toString())
 
 
 
@@ -370,6 +372,7 @@ var obj = {
   length: 5,
   method: function(fn) {
     fn();
+    // fn.call(this)
     arguments[0]();
   }
 };
@@ -461,7 +464,9 @@ console.log(a[6]);
 
 //41. What is the value of typeof undefined == typeof NULL?
 
-
+console.log(typeof undefined)
+console.log(typeof null)
+console.log(typeof undefined == typeof null)
 
 
 
@@ -483,6 +488,7 @@ function outer(){
         var b = 3;
         console.log(b)
     }
+    console.log(b)
     inner();
 }
 outer();
@@ -497,7 +503,9 @@ outer();
 function Person(){}
 
 var person = Person()
-var person = new Person()
+console.log(person)
+person = new Person()
+console.log(person)
 
 
 
@@ -518,7 +526,12 @@ var person = new Person()
 
 // 47. Что покажут эти два alert?
 
-var foo = "Hello"; (function() { var bar = " World"; alert(foo + bar); })(); alert(foo + bar);
+var foo = "Hello";
+(function () {
+  var bar = " World";
+  console.log(foo + bar);
+})();
+console.log(foo + bar);
 
 
 
@@ -528,6 +541,7 @@ var foo = "Hello"; (function() { var bar = " World"; alert(foo + bar); })(); ale
 
 var foo = {};
 foo.bar = 'hello';
+console.log(foo.length)
 
 
 
@@ -536,18 +550,18 @@ foo.bar = 'hello';
 // 49. Что выведется в консоль?
 
 var a = {
-    v: 1,
-  };
-  
-  var b = {
-    v: 2,
-  };
-  
-  function logValue() {
-    console.log(this.v);
-  }
-  
-  logValue.bind(a).bind(b)();
+  v: 1,
+};
+
+var b = {
+  v: 2,
+};
+
+function logValue() {
+  console.log(this.v);
+}
+
+logValue.bind(a).bind(b)();
 
 
 
