@@ -89,7 +89,8 @@ console.log(typeof typeof 1);
 // 8. Что будет
 
 console.log(10 + '10' - 10)
-
+console.log('10' + 10 - 10)
+console.log(10 - '10' + 10)
 
 
 
@@ -111,12 +112,14 @@ function logValue() {
 
 logValue.bind(a).bind(b)();
 
+
+
 // 10. Необходимо, чтобы этот код выводил в лог числа 0, 1, 2, 3 в указанном порядке, 
 // но он этого не делает (Однажды вы столкнётесь с этой ошибкой. Некоторые люди любят
 // задавать этот вопрос на собеседованиях).
 
 for (var i = 0; i < 4; i++) {
-    setTimeout(() => console.log(i), 0)
+    setTimeout( () => console.log(i), 0 )
 }
 
 
@@ -197,7 +200,7 @@ var arr1 = "john".split('');
 var arr2 = arr1.reverse();
 var arr3 = "jones".split('');
 arr2.push(arr3);
-console.log(arr2);
+// console.log(arr2);
 console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
 console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
 
@@ -267,7 +270,7 @@ console.log((function f(n) { return ((n > 1) ? n * f(n - 1) : n) })(10));
 
 // 21. What would the following lines of code output to the console?
 
-console.log("0 || 1 = "+(0 || 1));
-console.log("1 || 2 = "+(1 || 2));
-console.log("0 && 1 = "+(0 && 1));
-console.log("1 && 2 = "+(1 && 2));
+console.log("0 || 1 = " + (0 || 1));
+console.log("1 || 2 = " + (1 || 2));
+console.log("0 && 1 = " + (0 && 1));
+console.log("1 && 2 = " + (1 && 2));

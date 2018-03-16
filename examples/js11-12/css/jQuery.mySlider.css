@@ -1,0 +1,44 @@
+.slider-hider {
+    width: 600px;
+    overflow: hidden;
+    float: left;
+}
+ 
+.slider-list {    
+    list-style: none;
+    width: 10000px;
+    padding: 0;
+    position: relative;
+}
+ 
+.slider-element {
+    display: block;
+    margin-right: 25px;
+    float: left;
+}
+ 
+.slider-element img {
+    max-width: 100px;
+}
+ 
+.slider-arrow-left, .slider-arrow-right {
+    float: left;
+    display: block;
+    border: 1px solid grey;
+    background-color: lightgrey;
+    padding: 5px;
+    margin-top: 50px;
+}
+ 
+.slider-arrow-left:hover, .slider-arrow-right:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+ 
+.slider-arrow-left {
+    margin-right: 25px;
+}
+ 
+.slider-arrow-right {
+    margin-left: 25px;
+}

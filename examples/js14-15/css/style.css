@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.search {
+	margin-top: 100px;
+	width: 80%;
+	height: 60px;
+	display: flex;
+    justify-content: center;
+}
+.search .form {
+	width: 80%;
+	height: 48px;
+	display: flex;
+    align-self: center;
+	justify-content: space-between;
+	align-items: center;
+}
+.search input {
+	width: 80%;
+	height: 32px;
+}
+.search .button {
+	width: 10%;
+	height: 32px;
+}
+.result img {
+	width: 23%;
+	height: 250px;
+	display: block;
+	margin: 1%;
+	float: left;
+}
+.test {
+	display: none;
+	height: 80px;
+}
+.test p:hover {
+	background: lightgray;
+	padding: 1px;
+}
+
