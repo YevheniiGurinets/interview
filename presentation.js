@@ -25,7 +25,7 @@ var obj = {
     length: 5,
     method: function (fn) {
         fn();
-        // fn.call(this)
+        fn.call(this)
         arguments[0]();
     }
 };
@@ -83,33 +83,33 @@ console.log(a[6]);
 console.log(typeof typeof 1);
 
 
-// 8. Что выведется в консоль?
+
+
+
+// 8. Что будет
+
+console.log(10 + '10' - 10)
+
+
+
+
+
+
+// 9. Что выведется в консоль?
 
 var a = {
     v: 1,
-};
+};    
 
 var b = {
     v: 2,
-};
+};    
 
 function logValue() {
     console.log(this.v);
-}
+}    
 
 logValue.bind(a).bind(b)();
-
-
-
-
-// 9. Что будет
-
-10 + '10' - 10
-
-
-
-
-
 
 // 10. Необходимо, чтобы этот код выводил в лог числа 0, 1, 2, 3 в указанном порядке, 
 // но он этого не делает (Однажды вы столкнётесь с этой ошибкой. Некоторые люди любят
@@ -262,3 +262,12 @@ console.log((function f(n) { return ((n > 1) ? n * f(n - 1) : n) })(10));
         console.log(x);
     })(2)
 })(1);
+
+
+
+// 21. What would the following lines of code output to the console?
+
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
